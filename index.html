@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Tripster - Book your stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#">Tripster</a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#properties">Properties</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#popular">Popular</a>
+      </nav>
+
+      <div class="auth-actions">
+        <button class="btn btn-outline" type="button">Sign up</button>
+        <button class="btn btn-primary" type="button">Log in</button>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <section class="hero" id="properties">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Book your stay with Tripster</h1>
+        <p>1,480,086 rooms around the world are waiting for you!</p>
+      </div>
+    </section>
+
+    <form class="search-box" id="searchForm">
+      <label class="search-field">
+        <span>Location</span>
+        <input id="locationInput" type="text" placeholder="Where are you going?" />
+      </label>
+
+      <label class="search-field">
+        <span>Check-in</span>
+        <input id="checkinInput" type="text" placeholder="Add date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
+      </label>
+
+      <label class="search-field">
+        <span>Check-out</span>
+        <input id="checkoutInput" type="text" placeholder="Add date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" />
+      </label>
+
+      <label class="search-field">
+        <span>Guests</span>
+        <select id="guestsInput">
+          <option value="">Number of guests</option>
+          <option>1 guest</option>
+          <option>2 guests</option>
+          <option>3 guests</option>
+          <option>4 guests</option>
+          <option>5+ guests</option>
+        </select>
+      </label>
+
+      <button class="search-submit" type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 12h13M13 6l6 6-6 6" />
+        </svg>
+      </button>
+    </form>
+
+    <section class="destinations" id="popular">
+      <h2>Popular destinations</h2>
+
+      <div class="destination-grid">
+        <article class="destination-card destination-card--tall" style="--image:url('https://images.unsplash.com/photo-1594386487351-2727c5d2f2a5?auto=format&fit=crop&w=1000&q=85')">
+          <a href="#" class="destination-label">Spain</a>
+        </article>
+
+        <div class="destination-stack">
+          <article class="destination-card" style="--image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=85')">
+            <a href="#" class="destination-label">London</a>
+          </article>
+          <article class="destination-card" style="--image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=900&q=85')">
+            <a href="#" class="destination-label">Lisbon</a>
+          </article>
+        </div>
+
+        <article class="destination-card destination-card--tall" style="--image:url('https://images.unsplash.com/photo-1555990793-da11153b2473?auto=format&fit=crop&w=1000&q=85')">
+          <a href="#" class="destination-label">Croatia</a>
+        </article>
+
+        <div class="destination-stack destination-stack--right">
+          <article class="destination-card" style="--image:url('https://images.unsplash.com/photo-1562695393-66e552d92c34?auto=format&fit=crop&w=900&q=85')">
+            <a href="#" class="destination-label">Bratislava</a>
+          </article>
+          <article class="destination-card" style="--image:url('https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=900&q=85')">
+            <a href="#" class="destination-label">Copenhagen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
